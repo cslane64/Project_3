@@ -1,0 +1,23 @@
+{
+  "name": "Project_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js & cd ./client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cslane64/Project_3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cslane64/Project_3/issues"
+  },
+  "homepage": "https://github.com/cslane64/Project_3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
