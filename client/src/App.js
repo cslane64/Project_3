@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 
 
 class App extends Component {
+  //make an ajax request to the backend
   render(){
     return (
       <div>
