@@ -8,4 +8,8 @@ const app = express();
 
 console.log("Just added this")
 
+app.get("/test", (req, res) => {
+    res.send("it worked");
+});
+
 app.listen(PORT, () => console.log(`Listening on port %s`, PORT));
