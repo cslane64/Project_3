@@ -1,22 +1,29 @@
 import React, { Component} from 'react';
 
-import test from "./util";
+//import test from "./util";
+import LogIn from "./components/login";
+import Contacts from "./components/contacts";
 
 
 
 class App extends Component {
-  //make an ajax request to the backend
-  componentDidMount(){
-    test().then(data => {
-      console.log(data);
-    });
+  state = {
+    isValidUser: false
+  }
+
+  handleLogIn = (username, password)=> {
+    if(username === "Chris") {
+      let isValidUser = true
+      this.setState({isValidUser});
+    }
+    console.log(username + password);
   }
   render(){
-    
     return (
-      <div>
-        <h1>This worked after nodemon.json change</h1>
-      </div>
+      //if its valid = data page ... else login page
+      this.state.isValidUser ? <Contacts /> : <LogIn handleLogIn={this.handleLogIn}/>
+      
+      
     );
   }
 }
