@@ -8,6 +8,9 @@ const api_routes = require ("./routes/api_routes");
 
 app.use("/", api_routes);
 
+//app.use(express.urlencoded({extended: true}));
+//app.use(express.json());
+
 console.log("Just added this")
 
 //apiRoutes();
