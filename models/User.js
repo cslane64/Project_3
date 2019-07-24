@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     locality: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    // contact belongs to a locality
+    User.belongsTo(models.Locality);
   };
   return User;
 };

@@ -6,7 +6,10 @@ module.exports = (sequelize, DataTypes) => {
     path: DataTypes.STRING
   }, {});
   Locality.associate = function(models) {
-    // associations can be defined here
+    // locality hasMany users
+    Locality.hasMany(models.User);
+
+    Locality.hasMany(models.Contact);
   };
   return Locality;
 };
