@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import logo from "../components/Logo50th.jpg";
 
 //import test from "./util";
 
@@ -28,13 +29,19 @@ class LogIn extends Component {
   
   render(){
     return (
-    
-      <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
-        <label>Name:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
-        <label>Password:<input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
-        <input type="submit" value="Submit"  />  
-      </form>
-      
+      <div>
+        <img src={ logo } alt="logo" />
+
+        <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
+          <label>Name:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
+          <br />
+          <br />
+          <label>Password:<input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
+          <br />
+          <br />
+          <input type="submit" value="Submit"  />  
+        </form>
+      </div>
       
     );
   }
