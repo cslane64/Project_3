@@ -1,4 +1,4 @@
-const {Contact} = require('../db/models');
+const {Contact} = require('../models');
 //const db = require('../db/models');
 module.exports = {
     getAll(res) {

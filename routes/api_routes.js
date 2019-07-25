@@ -5,12 +5,15 @@ const router = require('express').Router();
 var db = require("../models");
 //const contacts_controller = require ("../controllers/contacts_controller");
 
+// send data to FE in an array
+
 router.get("/api/contacts", (req, res) => {
     db.Contact.findAll({}).then(function(contacts) {
         res.json(contacts);
+        console.log(contacts);
     })
     //contacts_controller.getAll(res);
-    console.log("contacts");
+    
 
 });
 // db.Event.findAll({}).then(function (dbExamples) {

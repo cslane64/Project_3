@@ -10,9 +10,13 @@ class Contacts extends Component {
 
     componentDidMount() {
         axios.get("/api/contacts")
-        .then(res => res.json())
+        //.then(res => res.json())
         .then(
            (result) => {
+               
+               console.log("Sucess  " + result);
+               console.log(JSON.stringify(result))
+
                this.setState({
                    isLoaded: true,
                    items: result.items
@@ -28,6 +32,7 @@ class Contacts extends Component {
     }
     render() { 
         const { error, isLoaded, items } = this.state;
+        let error = this.state.error;
         if (error) {
             return <div> Error: {error.message}</div>
         } else if (!isLoaded) {

@@ -2,7 +2,7 @@ const express = require("express")
 const bodyParser = require('body-parser');
 const path = require('path');
 
-//var db = require("./db/models");
+//var db = require("./models");
 const PORT = 5000;
 
 
@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-console.log("Just added this")
 
-// db.sequelize.sync({ force: false }).then(function() {
+
+// db.sequelize.sync({ force: true }).then(function() {
 //     app.listen(PORT, () => console.log(`Listening on port %s`, PORT));
 //     });
 

@@ -11,6 +11,8 @@ class App extends Component {
   state = {
     isValidUser: false
   }
+ //****** POST route to validate against DB */
+// IsValid send back a string or boolean... if not send back an error
 
   handleLogIn = (username, password)=> {
     if(username === "Chris") {
