@@ -1,9 +1,10 @@
-const models = require('../models');
-
+const {Contact} = require('../db/models');
+//const db = require('../db/models');
 module.exports = {
     getAll(res) {
-        models.contacts.find({})
+        db.Contact.findAll({})
         .then(contacts => res.json())
         
     }
 }
+

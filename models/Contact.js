@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     emailAddress: DataTypes.STRING
   }, {});
   Contact.associate = function(models) {
-    // contact belongs to a locality
+    // associations can be defined here
     Contact.belongsTo(models.Locality);
   };
   return Contact;

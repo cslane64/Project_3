@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import logo from "../components/Logo50th.jpg";
+import logo from "../img/Logo50th.jpg";
 
 //import test from "./util";
 

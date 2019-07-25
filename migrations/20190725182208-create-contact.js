@@ -1,21 +1,24 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('localities', {
+    return queryInterface.createTable('contacts', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      localityName: {
+      firstName: {
         type: Sequelize.STRING
       },
-      Abbr: {
+      lastName: {
         type: Sequelize.STRING
       },
-      path: {
+      emailAddress: {
         type: Sequelize.STRING
+      },
+      localityId: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -28,6 +31,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('localities');
+    return queryInterface.dropTable('contacts');
   }
 };
