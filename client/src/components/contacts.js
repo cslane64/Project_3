@@ -32,7 +32,7 @@ class Contacts extends Component {
     }
     render() { 
         const { error, isLoaded, items } = this.state;
-        let error = this.state.error;
+        
         if (error) {
             return <div> Error: {error.message}</div>
         } else if (!isLoaded) {
