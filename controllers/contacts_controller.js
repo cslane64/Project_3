@@ -2,7 +2,7 @@ const {Contact} = require('../models');
 //const db = require('../db/models');
 module.exports = {
     getAll(res) {
-        db.Contact.findAll({})
+        Contact.findAll({})
         .then(contacts => res.json())
         
     }

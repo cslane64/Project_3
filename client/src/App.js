@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 
 //import test from "./util";
 import LogIn from "./components/login";
+import Register from "./components/register";
 import Contacts from "./components/contacts";
 //import getAll from "./util/index";
 
@@ -33,4 +34,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App; 
+
+//

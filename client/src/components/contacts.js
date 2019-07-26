@@ -14,7 +14,7 @@ class Contacts extends Component {
         .then(
            (result) => {
                
-               console.log("Sucess  " + result);
+               console.log("Success  " + result);
                console.log(JSON.stringify(result))
 
                this.setState({
