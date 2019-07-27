@@ -5,7 +5,7 @@ class Contacts extends Component {
     state = { 
         error: null,
         isLoaded: false,
-        items: [1]
+        items: []
      };
 
     componentDidMount() {
@@ -19,7 +19,7 @@ class Contacts extends Component {
 
                this.setState({
                    isLoaded: true,
-                   items: result.data.items
+                   items: result.data
                });
            },
            (error) => {
