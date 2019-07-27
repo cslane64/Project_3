@@ -12,11 +12,11 @@ router.get("/api/contacts", (req, res) => {
         res.json(contacts);
         console.log(contacts);
     })
-    //contacts_controller.getAll(res);
     
-
 });
-// db.Event.findAll({}).then(function (dbExamples) {
-//     res.json(dbExamples);
+
+// router.post("/api/login", req, res) => {
+    
+// }
 
 module.exports = router;

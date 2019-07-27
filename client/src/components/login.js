@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import logo from "../img/Logo50th.jpg";
+import { Link } from "react-router-dom";
 
 //import test from "./util";
 
@@ -39,8 +40,11 @@ class LogIn extends Component {
           <label>Password:<input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
           <br />
           <br />
-          <input type="submit" value="Submit"  />  
+          <input type="submit" value="Log In"  />  
+             
         </form>
+
+        <Link to={'/register'}>Register</Link> 
       </div>
       
     );
