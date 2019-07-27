@@ -8,9 +8,9 @@ var db = require("../models");
 // send data to FE in an array
 
 router.get("/api/contacts", (req, res) => {
-    db.Contact.findAll({}).then(function() {
-        res.json();
-        console.log(res);
+   db.Contact.findAll().then(function(contacts) {
+        res.json(contacts);
+        console.log(contacts);
     })
     //contacts_controller.getAll(res);
     

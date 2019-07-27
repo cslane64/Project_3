@@ -5,7 +5,7 @@ class Contacts extends Component {
     state = { 
         error: null,
         isLoaded: false,
-        items: []
+        items: [1]
      };
 
     componentDidMount() {
@@ -14,12 +14,12 @@ class Contacts extends Component {
         .then(
            (result) => {
                
-               console.log("Success  " + result);
-               console.log(JSON.stringify(result))
+               console.log("Success  " + result.data);
+                console.log(result.data);
 
                this.setState({
                    isLoaded: true,
-                   items: result.items
+                   items: result.data.items
                });
            },
            (error) => {
@@ -39,13 +39,15 @@ class Contacts extends Component {
             return <div>Loading...</div>
         } else {
             return ( 
-                <ul>
-                    {items.map(item => (
-                        <li key={item.id}>
-                            {item.firstName} {item.lastName} {item.emailAddress}
-                        </li>
-                    ))}
-                </ul>
+                <div>
+                    <ul>
+                        {items.map(items => (
+                            <li key={items.id}>
+                                {items.firstName} {items.lastName} {items.emailAddress}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
              );
         }
         
