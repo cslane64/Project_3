@@ -41,9 +41,9 @@ const App = () => {
     return (
       //if its valid = data page ... else login page
       <BrowserRouter>
-      <Route exact path="/" component={ HomePage }/>
-      <Route exact path="/register" component={ Register }/>
-      {/* this.state.isValidUser ? <Contacts /> : <LogIn handleLogIn={this.handleLogIn}/> */}
+        <Route exact path="/" component={ HomePage }/>
+        <Route exact path="/register" component={ Register }/>
+        {/* this.state.isValidUser ? <Contacts /> : <LogIn handleLogIn={this.handleLogIn}/> */}
       </BrowserRouter>
       
     );

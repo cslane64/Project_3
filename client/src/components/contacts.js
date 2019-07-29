@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HelloWorld from "./DataGrid";
 import axios from "axios";
 
 class Contacts extends Component {
@@ -47,6 +48,7 @@ class Contacts extends Component {
                             </li>
                         ))}
                     </ul>
+                    <HelloWorld />
                 </div>
              );
         }
