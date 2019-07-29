@@ -42,13 +42,13 @@ class Contacts extends Component {
             return ( 
                 <div>
                     <ul>
-                        {items.map(items => (
+                        {/* {items.map(items => (
                             <li key={items.id}>
                                 {items.firstName} {items.lastName} {items.emailAddress}
                             </li>
-                        ))}
+                        ))} */}
                     </ul>
-                    <HelloWorld />
+                    <HelloWorld name={items}/>
                 </div>
              );
         }
