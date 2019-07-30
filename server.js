@@ -1,7 +1,9 @@
 const express = require("express")
 const bodyParser = require('body-parser');
 const path = require('path');
-
+const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 const PORT = 5000;
 
@@ -18,11 +20,10 @@ const PORT = 5000;
 const api_routes = require ("./routes/api_routes");
 
 
-const app = express();
+
 app.use("/", api_routes);
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 

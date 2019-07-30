@@ -17,12 +17,13 @@ router.get("/api/contacts", (req, res) => {
 
 // router.post("/api/SignIn", req, res) => {
     router.post("/api/SignIn", (req, res) => {
-        let username = req.body.username;
-        let password = req.body.password;
+        console.log(req.body);
+        // let username = req.body.username;
+        // let password = req.body.password;
         console.log(req.body);
      
-        db.User.findOne({ where: { username: username } }).then((user) => {
-            console.log(user);
+         //db.User.findOne({ where: { username: username } }).then((user) => {
+           //  console.log(user);
         //   var bcrypt = require('bcrypt');
         //   bcrypt.compare(password, user.password, function(err, result) {
         //   console.log(user.password);
@@ -33,13 +34,13 @@ router.get("/api/contacts", (req, res) => {
      
             // };
      
-            res.json(res);
+            //res.json(res);
      
         //   } else {
-        //     res.send("");
+        //   res.send(r);
         //   }
         })
-    })
+    //})
      
       //})
     

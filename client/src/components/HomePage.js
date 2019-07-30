@@ -6,29 +6,28 @@ import LogIn from "./login";
 import Contacts from "./contacts";
 import axios from 'axios';
 
+
+
 class HomePage extends Component {
     state = {
       isValidUser: false
     }
    //****** POST route to validate against DB */
   // IsValid send back a string or boolean... if not send back an error
-        
+    
+
     handleLogIn = (username, password)=> {
-      //let data = {username, password}
-      axios.post({
-        method: "POST",
-        url: "/api/SignIn",
-        data: {
-            username: username,
-            password: password}
-        
-      }).then((res) => {
+      console.log(username);
+      let data = {username, password}
+      axios.post("/api/SignIn", { data })
+      .then((res) => {
         console.log(res);
+        console.log(res.data);
   
         // if (res) {
         //   let isValidUser = true;
         //   this.setState({isValidUser});
-        //   setSession(res.userid, res.name);
+        // //   setSession(res.userid, res.name);
         //   alert("Logged in!");
         //   //window.location.pathname = "/find.html";
         // }
@@ -38,11 +37,11 @@ class HomePage extends Component {
   
       })
 
-      function setSession(userid, name) {
-        sessionStorage.setItem('userid', userid);
-        sessionStorage.setItem('name', name);
+      // function setSession(userid, name) {
+      //   sessionStorage.setItem('userid', userid);
+      //   sessionStorage.setItem('name', name);
       
-      }
+      // }
       
       // if(username === "Chris") {
       //   let isValidUser = true
