@@ -18,32 +18,33 @@ router.get("/api/contacts", (req, res) => {
 // router.post("/api/SignIn", req, res) => {
     router.post("/api/SignIn", (req, res) => {
         console.log(req.body);
-        // let username = req.body.username;
-        // let password = req.body.password;
-        console.log(req.body);
+        let username = req.body.data.username;
+        let password = req.body.data.password;
+        console.log(req.body.data.username);
+        
      
-         //db.User.findOne({ where: { username: username } }).then((user) => {
-           //  console.log(user);
-        //   var bcrypt = require('bcrypt');
-        //   bcrypt.compare(password, user.password, function(err, result) {
-        //   console.log(user.password);
-          //if (user) {
-            // var returnedObj = {
-            //   userid: user.id,
-            //   name: user.name
+         db.User.findOne({ where: { username: username } }).then((username) => {
+        //      console.log(username);
+        // //   var bcrypt = require('bcrypt');
+        // //   bcrypt.compare(password, user.password, function(err, result) {
+        // //   console.log(user.password);
+          if (username) {
+            let returnedObj = {
+               userid: user.id,
+               name: user.name
      
-            // };
+             };
      
-            //res.json(res);
+            res.json(returnedObj);
      
-        //   } else {
-        //   res.send(r);
-        //   }
-        })
-    //})
+           } else {
+            res.send("This post route worked");
+          }
+         })
+    })
      
       //})
     
-// }
+ //}
 
 module.exports = router;
