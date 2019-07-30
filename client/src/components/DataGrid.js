@@ -4,9 +4,10 @@ import ReactDataGrid from "react-data-grid";
 
 
 const columns = [
-    {key: "id", name: "ID"},
-    {key: "title", name: "Title"},
-    {key: "count", name: "Count"}
+    {key: "firstName", name: "First Name"},
+    {key: "lastName", name: "Last Name"},
+    {key: "emailAddress", name: "Email Address"},
+    {key: "localityId", name: "State"}
 ];
 
 //const rows = [{id: 0, title: 'row0', count: 20}, {id: 1, title: 'row1', count: 40}, {id: 2, title: 'row1', count: 60}];
@@ -15,7 +16,12 @@ function HelloWorld(props) {
     let data = props.name;
     //const rows = [{id: data.firstName, title: data.lastName, count: data.emailAddress}]
     let newRows = data.map(item => {
-        return {id: item.firstName, title: item.lastName, count: item.emailAddress}
+        return {firstName: item.firstName,
+                lastName: item.lastName,
+                emailAddress: item.emailAddress,
+                localityId: item.LocalityId
+
+            }  
 
     })
     console.log(props);
@@ -23,7 +29,7 @@ function HelloWorld(props) {
         columns = {columns}
         rowGetter= {i => newRows[i]}
         rowsCount={5}
-        minHeight={150}/>)
+        minHeight={250}/>)
 }
 
 export default HelloWorld;

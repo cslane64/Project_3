@@ -15,8 +15,8 @@ class Contacts extends Component {
         .then(
            (result) => {
                
-               console.log("Success  " + result.data);
-                console.log(result.data);
+               //console.log("Success  " + result.data);
+                //console.log(result.data);
 
                this.setState({
                    isLoaded: true,
@@ -41,13 +41,7 @@ class Contacts extends Component {
         } else {
             return ( 
                 <div>
-                    <ul>
-                        {/* {items.map(items => (
-                            <li key={items.id}>
-                                {items.firstName} {items.lastName} {items.emailAddress}
-                            </li>
-                        ))} */}
-                    </ul>
+                    
                     <HelloWorld name={items}/>
                 </div>
              );

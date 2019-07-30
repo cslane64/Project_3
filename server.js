@@ -2,10 +2,17 @@ const express = require("express")
 const bodyParser = require('body-parser');
 const path = require('path');
 
-//var db = require("./models");
+
 const PORT = 5000;
 
-
+//CREATE USER - 
+// var User = require("./models").User;
+// User.create({
+//     username: "Chris",
+//     password: "password"
+// }).then(() => {
+//     console.log("User created");
+// });
 
 //Listen for requests from the front end and return
 const api_routes = require ("./routes/api_routes");
