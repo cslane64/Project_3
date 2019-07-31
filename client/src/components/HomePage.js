@@ -23,17 +23,23 @@ class HomePage extends Component {
       .then((res) => {
         console.log(res);
         console.log(res.data);
-  
-        // if (res) {
+        
+        if (res.data.id) {
+          console.log("User Name and password not found");
+          let isValidUser = true;
+          this.setState({isValidUser});
+        //   setSession(res.userid, res.name);
+          alert("Logged in!");
+          //window.location.pathname = "/find.html";
+        }
+        else {
+          alert("User password  found!");
         //   let isValidUser = true;
         //   this.setState({isValidUser});
         // //   setSession(res.userid, res.name);
         //   alert("Logged in!");
         //   //window.location.pathname = "/find.html";
-        // }
-        // else {
-        //   alert("User password combination not found!");
-        // }
+        }
   
       })
 
