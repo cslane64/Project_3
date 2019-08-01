@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import logo from "../img/Logo50th.jpg";
 import { Link } from "react-router-dom";
+import Header from "./Header"
+
 
 //import test from "./util";
 
@@ -31,6 +33,7 @@ class LogIn extends Component {
   render(){
     return (
       <div>
+        <Header/>
         <img src={ logo } alt="logo" />
 
         <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
