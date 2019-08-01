@@ -17,15 +17,15 @@ class HomePage extends Component {
     
 
     handleLogIn = (username, password)=> {
-      console.log(username);
+      //console.log(username);
       let data = {username, password}
       axios.post("/api/SignIn", { data })
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        //console.log(res);
+        //console.log(res.data);
         
         if (res.data.id) {
-          console.log("User Name and password not found");
+          //console.log("User Name and password found");
           let isValidUser = true;
           this.setState({isValidUser});
         //   setSession(res.userid, res.name);
@@ -33,7 +33,7 @@ class HomePage extends Component {
           //window.location.pathname = "/find.html";
         }
         else {
-          alert("User password  found!");
+          alert("Username and password combination not found!!");
         //   let isValidUser = true;
         //   this.setState({isValidUser});
         // //   setSession(res.userid, res.name);

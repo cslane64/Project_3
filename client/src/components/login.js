@@ -34,7 +34,7 @@ class LogIn extends Component {
         <img src={ logo } alt="logo" />
 
         <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
-          <label>Name:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
+          <label>Email Address:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
           <br />
           <br />
           <label>Password:<input type="text" name="password" onChange= {this.handlePasswordChange}/></label>

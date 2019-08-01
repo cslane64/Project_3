@@ -10,7 +10,6 @@ class Register extends Component {
   state = {
     firstName: '',
     lastName: '',
-    username: '',
     emailAddress: '',
     password: '',
     locality: ''
@@ -31,8 +30,8 @@ class Register extends Component {
     })
   };
 
-  onSubmit = e => {
-    e.preventDefault();
+  onSubmit = (e) => {
+    
     console.log(this.state);
 
   };
@@ -42,7 +41,7 @@ class Register extends Component {
       <div>
         <img src={ logo } alt="logo" />
         
-        <form>
+        <form onSubmit={ (e)=> {e.preventDefault(); this.onSubmit()}}>
           <label>First Name:<input 
           name="firstName"
           placeholder="First Name" 
@@ -54,13 +53,6 @@ class Register extends Component {
           name="lastName"
           placeholder="Last Name" 
           value={this.state.lastName} 
-          onChange={e => this.change(e)}/></label>
-          <br />
-          <br />
-          <label>User Name:<input 
-          name="userName"
-          placeholder="User Name" 
-          value={this.state.userName} 
           onChange={e => this.change(e)}/></label>
           <br />
           <br />
@@ -86,7 +78,8 @@ class Register extends Component {
           onChange={e => this.change(e)}/></label>
           <br />
           <br />
-          <button onClick={e => this.onSubmit()}>Submit</button>
+          <input type="submit" value="Register"  />
+          {/* <button onClick={e => this.onSubmit()}>Submit</button> */}
         </form>
         {/* <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
           <label>Name:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
