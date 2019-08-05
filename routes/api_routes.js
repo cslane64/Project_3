@@ -44,6 +44,28 @@ router.get("/api/contacts", (req, res) => {
           }
          })
     })
+
+    router.post("/api/register", (req, res) => {
+      //var Contact = db.Contact;
+        console.log(req.body);
+        db.Contact.create({
+            firstname: req.body.firstname,
+            lastName: req.body.lastName,
+            emailAddress: req.body.emailAddress,
+            password: req.body.password,
+            locality: req.body.locality
+        // }).then(() => {
+        //     db.User.create({
+        //       username: req.body.emailAddress,
+        //       password: req.body.password
+        //     })
+        }).then(() => {
+          console.log("User created");
+            res.send("You have been registered")
+        });
+      
+      
+    })
      //working now
       //})
     

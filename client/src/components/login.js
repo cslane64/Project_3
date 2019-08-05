@@ -48,7 +48,7 @@ class LogIn extends Component {
                 <label>Email Address:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
                 <br />
                 <br />
-                <label>Password:<input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
+                <label>Password:     <input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
                 <br />
                 <br />
                 <input type="submit" value="Log In"  />  

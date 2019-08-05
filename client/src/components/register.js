@@ -1,5 +1,11 @@
 import React, { Component} from 'react';
+import axios from 'axios';
 import logo from "../img/Logo50th.jpg";
+import Header from "./Header"
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 
 //import test from "./util";
 
@@ -31,6 +37,16 @@ class Register extends Component {
   };
 
   onSubmit = (e) => {
+    axios.post('/api/register', {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      emailAddress: this.state.emailAddress,
+      locality: this.state.locality,
+      password: this.state.password
+    })
+    .then(function (response) {
+      console.log(response);
+    })
     
     console.log(this.state);
 
@@ -39,57 +55,58 @@ class Register extends Component {
   render(){
     return (
       <div>
+        <Header />
         <img src={ logo } alt="logo" />
-        
-        <form onSubmit={ (e)=> {e.preventDefault(); this.onSubmit()}}>
-          <label>First Name:<input 
-          name="firstName"
-          placeholder="First Name" 
-          value={this.state.firstName} 
-          onChange={e => this.change(e)}/></label>
-          <br />
-          <br />
-          <label>Last Name:<input 
-          name="lastName"
-          placeholder="Last Name" 
-          value={this.state.lastName} 
-          onChange={e => this.change(e)}/></label>
-          <br />
-          <br />
-          <label>Email:<input 
-          name="emailAddress"
-          placeholder="Email Address" 
-          value={this.state.emailAddress} 
-          onChange={e => this.change(e)}/></label>
-          <br />
-          <br />
-          <label>Password:<input 
-          name="password"
-          type="password"
-          placeholder="Password" 
-          value={this.state.password} 
-          onChange={e => this.change(e)}/></label>
-          <br />
-          <br />
-          <label>State:<input 
-          name="locality"
-          placeholder="State" 
-          value={this.state.localityß} 
-          onChange={e => this.change(e)}/></label>
-          <br />
-          <br />
-          <input type="submit" value="Register"  />
-          {/* <button onClick={e => this.onSubmit()}>Submit</button> */}
-        </form>
-        {/* <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
-          <label>Name:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
-          <br />
-          <br />
-          <label>Password:<input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
-          <br />
-          <br />
-          <input type="submit" value="Submit"  />  
-        </form> */}
+
+        <Container>
+          <Row>
+            <Col></Col>
+              <Col>
+                <form onSubmit={ (e)=> {e.preventDefault(); this.onSubmit()}}>
+                  <label>First Name:<input 
+                  name="firstName"
+                  placeholder="First Name" 
+                  value={this.state.firstName} 
+                  onChange={e => this.change(e)}/></label>
+                  <br />
+                  <br />
+                  <label>Last Name:<input 
+                  name="lastName"
+                  placeholder="Last Name" 
+                  value={this.state.lastName} 
+                  onChange={e => this.change(e)}/></label>
+                  <br />
+                  <br />
+                  <label>Email:<input 
+                  name="emailAddress"
+                  placeholder="Email Address" 
+                  value={this.state.emailAddress} 
+                  onChange={e => this.change(e)}/></label>
+                  <br />
+                  <br />
+                  <label>Password:<input 
+                  name="password"
+                  type="password"
+                  placeholder="Password" 
+                  value={this.state.password} 
+                  onChange={e => this.change(e)}/></label>
+                  <br />
+                  <br />
+                  <label>State:<input 
+                  name="locality"
+                  placeholder="State" 
+                  value={this.state.localityß} 
+                  onChange={e => this.change(e)}/></label>
+                  <br />
+                  <br />
+                  <input type="submit" value="Register"/>
+                  
+                </form>
+                
+              </Col>
+            <Col></Col>
+          </Row>
+        </Container>
       </div>
       
     );
