@@ -14,9 +14,6 @@ module.exports = {
       abbr: {
         type: Sequelize.STRING
       },
-      path: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

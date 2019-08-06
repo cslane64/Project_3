@@ -95,7 +95,7 @@ class Register extends Component {
                   <label>State:<input 
                   name="locality"
                   placeholder="State" 
-                  value={this.state.localityß} 
+                  value={this.state.localityID} 
                   onChange={e => this.change(e)}/></label>
                   <br />
                   <br />
