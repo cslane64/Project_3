@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Register from "./components/register";
 //import Contacts from "./components/contacts";
 import HomePage from "./components/HomePage";
-//import getAll from "./util/index";
+import Manage from "./components/manage";
 
 
 
@@ -17,8 +17,11 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={ HomePage }/>
+          
           <Route exact path="/register" component={ Register }/>
-          {/* this.state.isValidUser ? <Contacts /> : <LogIn handleLogIn={this.handleLogIn}/> */}
+
+          <Route exact path="/manage" component={ Manage }/>
+          
         </Switch>
       </BrowserRouter>
       

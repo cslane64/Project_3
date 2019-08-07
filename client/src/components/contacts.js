@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import HelloWorld from "./DataGrid";
 import axios from "axios";
+import Header from "./Header";
+import logo from "../img/Logo50th.jpg";
+import Button from 'react-bootstrap/Button';
+// import { BrowserRouter } from "react-router-dom";
+
+
 
 class Contacts extends Component {
     state = { 
         error: null,
         isLoaded: false,
         items: []
+        
      };
 
     componentDidMount() {
@@ -15,10 +22,7 @@ class Contacts extends Component {
         .then(
            (result) => {
                
-               //console.log("Success  " + result.data);
-                //console.log(result.data);
-
-               this.setState({
+                this.setState({
                    isLoaded: true,
                    items: result.data
                });
@@ -41,8 +45,12 @@ class Contacts extends Component {
         } else {
             return ( 
                 <div>
-                    
+                    <Header />
+                    <img src={ logo } alt="logo" /> 
                     <HelloWorld name={items}/>
+                    <Button  href="/manage" variant="primary" size="lg" block>
+                        Manage your State Contacts
+                    </Button>
                 </div>
              );
         }

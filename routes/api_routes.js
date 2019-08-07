@@ -55,7 +55,8 @@ router.get("/api/contacts", (req, res) => {
       }
       let newUser = {
         username: req.body.emailAddress,
-        password: req.body.password
+        password: req.body.password,
+        localityID: req.body.locality
       } 
         console.log(req.body);
         console.log(newContact);

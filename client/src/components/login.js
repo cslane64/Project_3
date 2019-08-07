@@ -5,21 +5,11 @@ import Header from "./Header"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
-
-
-//import test from "./util";
-
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 
 class LogIn extends Component {
-  //make an ajax request to the backend
-  // componentDidMount(){
-  //   test().then(data => {
-  //     console.log(data);
-  //   });
-  // }
-
   state = {
     username: null,
     password: null
@@ -44,20 +34,27 @@ class LogIn extends Component {
           <Row>
             <Col></Col>
             <Col>
-              <form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
-                <label>Email Address:<input type="text" name="name" onChange={ this.handleNameChange}/></label>
-                <br />
-                <br />
-                <label>Password:     <input type="text" name="password" onChange= {this.handlePasswordChange}/></label>
-                <br />
-                <br />
-                <input type="submit" value="Log In"  />  
-              </form>
+              <Form onSubmit={ (e)=> {e.preventDefault();this.props.handleLogIn(this.state.username, this.state.password)}}>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control type="email" placeholder="Enter email" onChange={ this.handleNameChange} />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" placeholder="Password" onChange={ this.handlePasswordChange} />
+                </Form.Group>
+                
+                <Button variant="primary" type="submit">
+                  Log In
+                </Button>
+              </Form>
             </Col>
             <Col></Col>
           </Row>
         </Container>
-        
+
+              
 
         <Link to={'/register'}>Register</Link> 
       </div>

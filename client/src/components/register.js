@@ -5,6 +5,8 @@ import Header from "./Header"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 
 //import test from "./util";
@@ -21,15 +23,7 @@ class Register extends Component {
     locality: ''
 }
 
-  // handleNameChange =(e) => {
-  //   let username = e.target.value;
-  //   this.setState ({ username});
-  // }
-  // handlePasswordChange =(e) => {ß
-  //   let password = e.target.value;
-  //   this.setState ({ password });
-  // }
-
+  
   change = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -46,6 +40,8 @@ class Register extends Component {
     })
     .then(function (response) {
       console.log(response);
+      
+        
     })
     
     console.log(this.state);
@@ -59,53 +55,42 @@ class Register extends Component {
         <img src={ logo } alt="logo" />
 
         <Container>
-          <Row>
-            <Col></Col>
-              <Col>
-                <form onSubmit={ (e)=> {e.preventDefault(); this.onSubmit()}}>
-                  <label>First Name:<input 
-                  name="firstName"
-                  placeholder="First Name" 
-                  value={this.state.firstName} 
-                  onChange={e => this.change(e)}/></label>
-                  <br />
-                  <br />
-                  <label>Last Name:<input 
-                  name="lastName"
-                  placeholder="Last Name" 
-                  value={this.state.lastName} 
-                  onChange={e => this.change(e)}/></label>
-                  <br />
-                  <br />
-                  <label>Email:<input 
-                  name="emailAddress"
-                  placeholder="Email Address" 
-                  value={this.state.emailAddress} 
-                  onChange={e => this.change(e)}/></label>
-                  <br />
-                  <br />
-                  <label>Password:<input 
-                  name="password"
-                  type="password"
-                  placeholder="Password" 
-                  value={this.state.password} 
-                  onChange={e => this.change(e)}/></label>
-                  <br />
-                  <br />
-                  <label>State:<input 
-                  name="locality"
-                  placeholder="State" 
-                  value={this.state.localityID} 
-                  onChange={e => this.change(e)}/></label>
-                  <br />
-                  <br />
-                  <input type="submit" value="Register"/>
-                  
-                </form>
-                
-              </Col>
-            <Col></Col>
-          </Row>
+            <Row>
+              <Col></Col>
+                <Col>
+                  <Form onSubmit={ (e)=> {e.preventDefault();this.onSubmit()}}>
+                    <Form.Group controlId="formBasicFirstName">
+                      <Form.Label>First Name</Form.Label>
+                      <Form.Control  name="firstName" type="text" placeholder="First Name" onChange={e => this.change(e)} />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicLastName">
+                      <Form.Label>Last Name</Form.Label>
+                      <Form.Control  name="lastName" type="text" placeholder="Last Name" onChange={e => this.change(e)} />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control name="emailAddress" type="email" placeholder="Enter email" onChange={e => this.change(e)} />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control  name="password" type="password" placeholder="Password" onChange={e => this.change(e)} />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicLocality">
+                      <Form.Label>State</Form.Label>
+                      <Form.Control  name="locality" type="text" placeholder="State" onChange={e => this.change(e)} />
+                    </Form.Group>
+                    
+                    <Button variant="primary" type="submit">
+                      Register
+                    </Button>
+                  </Form>   
+                </Col>
+              <Col></Col>
+            </Row>
         </Container>
       </div>
       
