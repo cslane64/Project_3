@@ -15,6 +15,14 @@ router.get("/api/contacts", (req, res) => {
     
 });
 
+router.get("/api/manage", (req, res) => {
+  db.Contact.findAll({}).then(function(localities) {
+       res.json(localities);
+       //console.log(contacts);
+   })
+   
+});
+
 // router.post("/api/SignIn", req, res) => {
     router.post("/api/SignIn", (req, res) => {
         console.log(req.body);

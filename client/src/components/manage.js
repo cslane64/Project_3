@@ -8,14 +8,13 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import axios from "axios";
-import HelloWorld from "./DataGrid"
-
+import StataGrid from "./StataGrid";
 
 
 class Manage extends Component {
   state = {
-    username: null,
-    password: null
+    isLoaded: false,
+    locality: []
   }
   componentDidMount() {
     axios.get("/api/manage")
@@ -25,7 +24,7 @@ class Manage extends Component {
            
             this.setState({
                isLoaded: true,
-               items: result.data
+               locality: result.data
            });
        },
        (error) => {
@@ -37,7 +36,7 @@ class Manage extends Component {
     )
 }
 render() { 
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, locality } = this.state;
     
     if (error) {
         return <div> Error: {error.message}</div>
@@ -48,10 +47,10 @@ render() {
             <div>
                 <Header />
                 <img src={ logo } alt="logo" /> 
-                <HelloWorld name={items}/>
-                <Button  href="/manage" variant="primary" size="lg" block>
+                <StataGrid name={locality}/>
+                {/* <Button  href="/manage" variant="primary" size="lg" block>
                     Manage your State Contacts
-                </Button>
+                </Button> */}
             </div>
          );
     }
