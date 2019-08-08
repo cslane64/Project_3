@@ -19,3 +19,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App_Bar {
+  background-color: maroon;
+}
+.nav_Link {
+  color: white;
+  text-align: right;
+  padding-left: 150px;
+}
+.nav_Link .active {
+  display: none;
+}
+

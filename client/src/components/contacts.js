@@ -47,6 +47,7 @@ class Contacts extends Component {
                 <div>
                     <Header />
                     <img src={ logo } alt="logo" /> 
+                    <h5>State Contacts</h5>
                     <HelloWorld name={items}/>
                     <Button  href="/manage" variant="primary" size="lg" block>
                         Manage your State Contacts

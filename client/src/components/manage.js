@@ -50,7 +50,8 @@ render() {
         return ( 
             <div>
                 <Header />
-                <img src={ logo } alt="logo" /> 
+                <img src={ logo } alt="logo" />
+                <h5>Authorized Users</h5> 
                 <StataGrid name={locality}/>
                 {/* <Button  href="/manage" variant="primary" size="lg" block>
                     Manage your State Contacts

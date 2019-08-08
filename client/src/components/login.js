@@ -56,7 +56,7 @@ class LogIn extends Component {
 
               
 
-        <Link to={'/register'}>Register</Link> 
+        {/* <Link to={'/register'}>Register</Link>  */}
       </div>
       
     );

@@ -18,6 +18,7 @@ const PORT = 5000;
 
 //Listen for requests from the front end and return
 const api_routes = require ("./routes/api_routes");
+const auth_routes = require ("./routes/auth_routes");
 
 
 
