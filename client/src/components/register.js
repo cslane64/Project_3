@@ -9,7 +9,6 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 
-//import test from "./util";
 
 
 
@@ -41,9 +40,13 @@ class Register extends Component {
     .then(function (response) {
       console.log(response);
       
+      
+      
+
+      
         
     })
-    
+    this.props.history.push('/api/contacts');
     console.log(this.state);
 
   };
@@ -87,7 +90,8 @@ class Register extends Component {
                     <Button variant="primary" type="submit">
                       Register
                     </Button>
-                  </Form>   
+                  </Form>  
+                  
                 </Col>
               <Col></Col>
             </Row>

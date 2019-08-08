@@ -26,7 +26,7 @@ function HelloWorld(props) {
     return (<ReactDataGrid
         columns = {columns}
         rowGetter= {i => newRows[i]}
-        rowsCount={5}
+        rowsCount={25}
         minHeight={250}/>)
 }
 
