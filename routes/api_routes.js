@@ -1,16 +1,12 @@
 const router = require('express').Router();
-// const Contact = require("../db/models").Contact;
-// const User = require("../db/models").User;
-// const Locality = require("../db/models").Locality;
-var db = require("../models");
-//const contacts_controller = require ("../controllers/contacts_controller");
 
-// send data to FE in an array
+var db = require("../models");
+
 
 router.get("/api/contacts", (req, res) => {
    db.Contact.findAll({}).then(function(contacts) {
         res.json(contacts);
-        //console.log(contacts);
+        
     })
     
 });
@@ -18,10 +14,19 @@ router.get("/api/contacts", (req, res) => {
 router.get("/api/manage", (req, res) => {
   db.Contact.findAll({}).then(function(localities) {
        res.json(localities);
-       //console.log(contacts);
+       
    })
    
 });
+
+// router.get("/api/manage, (req, res) => {
+  
+//   db.Contact.findAll({}).then(function(localities) {
+//        res.json(localities);
+       
+//    })
+   
+// });
 
 // router.post("/api/SignIn", req, res) => {
     router.post("/api/SignIn", (req, res) => {

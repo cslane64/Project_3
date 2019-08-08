@@ -14,7 +14,7 @@ function StataGrid(props) {
     
     let newRows = data.map(item => {
         
-        return {firstName: item.firstName,
+        return {firstName: item.firstName, 
                 lastName: item.lastName,
                 emailAddress: item.emailAddress,
                 localityId: item.localityID

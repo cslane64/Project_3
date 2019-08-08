@@ -14,7 +14,7 @@ class Contacts extends Component {
         isLoaded: false,
         items: []
         
-     };
+     }; 
 
     componentDidMount() {
         axios.get("/api/contacts")
