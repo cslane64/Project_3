@@ -4,7 +4,6 @@ import axios from "axios";
 import Header from "./Header";
 import logo from "../img/Logo50th.jpg";
 import Button from 'react-bootstrap/Button';
-// import { BrowserRouter } from "react-router-dom";
 
 
 
@@ -49,8 +48,8 @@ class Contacts extends Component {
                     <img src={ logo } alt="logo" /> 
                     <h5>State Contacts</h5>
                     <HelloWorld name={items}/>
-                    <Button  href="/manage" variant="primary" size="lg" block>
-                        Manage your State Contacts
+                    <Button  href="/create" variant="primary" size="lg" block>
+                        Create New Contact
                     </Button>
                 </div>
              );

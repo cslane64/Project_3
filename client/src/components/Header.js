@@ -18,7 +18,9 @@ export default props =>
             Multistate Tax Commission State Contact Portal
           </Typography>
           <nav>
-            <NavLink className="nav_Link" to="/" exact>Home</NavLink>
+            <NavLink className="nav_Link" to="/" exact>Logout</NavLink>
+            <NavLink className="nav_Link" to="/contacts">Contacts</NavLink>
+            <NavLink className="nav_Link" to="/create" exact>Create Contact</NavLink>
             <NavLink className="nav_Link" to='/register' exact>Register</NavLink>
           </nav>
                     

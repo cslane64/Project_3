@@ -26,8 +26,12 @@ code {
 .nav_Link {
   color: white;
   text-align: right;
-  padding-left: 150px;
+  padding-left: 60px;
 }
+/* .nav_Links {
+  color: white;
+  padding-left: 25px;
+} */
 .nav_Link .active {
   display: none;
 }

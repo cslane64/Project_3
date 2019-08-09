@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import logo from "../img/Logo50th.jpg";
 import Header from "./Header"
@@ -12,13 +12,13 @@ import Button from 'react-bootstrap/Button'
 
 
 
-class Register extends Component {
+class Create extends Component {
 
   state = {
     firstName: '',
     lastName: '',
     emailAddress: '',
-    password: '',
+    // password: '',
     locality: ''
 }
 
@@ -30,15 +30,21 @@ class Register extends Component {
   };
 
   onSubmit = (e) => {
-    axios.post('/api/register', {
+    axios.post('/api/create', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       emailAddress: this.state.emailAddress,
       locality: this.state.locality,
-      password: this.state.password
+      //password: this.state.password
     })
     .then(function (response) {
       console.log(response);
+      
+      
+      
+
+      
+        
     })
     this.props.history.push('/contacts');
     console.log(this.state);
@@ -50,9 +56,7 @@ class Register extends Component {
       <div>
         <Header />
         <img src={ logo } alt="logo" />
-
-        <h3>Create New User</h3>
-
+        <h3>Create New Contact</h3>
         <Container>
             <Row>
               <Col></Col>
@@ -73,10 +77,10 @@ class Register extends Component {
                       <Form.Control name="emailAddress" type="email" placeholder="Enter email" onChange={e => this.change(e)} />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                    {/* <Form.Group controlId="formBasicPassword">
                       <Form.Label>Password</Form.Label>
                       <Form.Control  name="password" type="password" placeholder="Password" onChange={e => this.change(e)} />
-                    </Form.Group>
+                    </Form.Group> */}
                                         
                     <Form.Group controlId="formBasicLocality">
                       <Form.Label>State</Form.Label>
@@ -138,7 +142,7 @@ class Register extends Component {
                     </Form.Group>
                     
                     <Button variant="primary" type="submit">
-                      Register
+                      Create
                     </Button>
                   </Form>  
                   
@@ -152,4 +156,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default Create;
