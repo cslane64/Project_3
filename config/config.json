@@ -1,12 +1,12 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "scp_db",
-    "host": "127.0.0.1",
+    "username": "edneljyosyzze5jy",
+    "password": "hhm5tua0m7ibc1s5",
+    "database": "fqp93w2x066sbfxz",
+    "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false,
-    "port": 8889
+    "port": 3306
   },
   "test": {
     "username": "edneljyosyzze5jy",
