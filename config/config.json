@@ -5,7 +5,7 @@
     "database": "bl77gzczg2ptmt6s",
     "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    //"operatorsAliases": false,
+    "operatorsAliases": false,
     "port": 3306
   },
   "test": {
@@ -14,7 +14,7 @@
     "database": "bl77gzczg2ptmt6s",
     "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    //"operatorsAliases": false,
+    "operatorsAliases": false,
     "port": 3306
   },
   "production": {

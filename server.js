@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 5000;
 
 
-const api_routes = require ("./routes/api_routes");
+const api_routes = require ("./routes/api_routes"); 
 const auth_routes = require ("./routes/auth_routes");
 
 if (process.env.NODE_ENV === "production") {
