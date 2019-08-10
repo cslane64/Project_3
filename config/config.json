@@ -9,19 +9,21 @@
     "port": 8889
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "edneljyosyzze5jy",
+    "password": "hhm5tua0m7ibc1s5",
+    "database": "fqp93w2x066sbfxz",
+    "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "port": 3306
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "edneljyosyzze5jy",
+    "password": "hhm5tua0m7ibc1s5",
+    "database": "fqp93w2x066sbfxz",
+    "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "port": 3306
   }
 }
