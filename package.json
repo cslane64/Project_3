@@ -36,6 +36,6 @@
     "react-bootstrap": "^1.0.0-beta.10",
     "react-data-grid": "^6.1.0",
     "react-router-dom": "^5.0.1",
-    "sequelize": "^5.10.1"
+    "sequelize": "^5.15.1"
   }
 }
